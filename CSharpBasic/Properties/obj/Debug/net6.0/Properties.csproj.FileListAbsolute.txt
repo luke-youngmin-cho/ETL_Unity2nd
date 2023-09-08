@@ -1,0 +1,15 @@
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\bin\Debug\net6.0\Properties.exe
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\bin\Debug\net6.0\Properties.deps.json
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\bin\Debug\net6.0\Properties.runtimeconfig.json
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\bin\Debug\net6.0\Properties.dll
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\bin\Debug\net6.0\Properties.pdb
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.csproj.AssemblyReference.cache
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.AssemblyInfoInputs.cache
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.AssemblyInfo.cs
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.csproj.CoreCompileInputs.cache
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.dll
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\refint\Properties.dll
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.pdb
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\Properties.genruntimeconfig.cache
+C:\Users\etl\Documents\GitHub\ETL_Unity2nd\CSharpBasic\Properties\obj\Debug\net6.0\ref\Properties.dll
