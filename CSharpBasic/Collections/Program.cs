@@ -37,6 +37,17 @@ namespace Collections
                 Console.WriteLine(item);
             }
 
+            using (IEnumerator<int> e = da1.GetEnumerator())
+            {
+                while (e.MoveNext())
+                {
+                    Console.WriteLine(e.Current);
+                }
+                e.Reset();
+            }
+
+
+
             MyLinkedList<float> ll1 = new MyLinkedList<float>();
             ll1.AddFirst(5.0f);
             ll1.AddLast(3.0f);

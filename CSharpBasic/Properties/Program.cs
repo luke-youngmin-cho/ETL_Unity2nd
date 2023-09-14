@@ -38,7 +38,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Dummy dummy1 = new Dummy();
+            dummy1.SetB(5);
+            Dummy dummy2 = new Dummy();
+            Console.WriteLine(dummy2.b);
         }
     }
 }
