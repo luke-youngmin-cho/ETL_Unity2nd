@@ -42,6 +42,14 @@
             dummy1.SetB(5);
             Dummy dummy2 = new Dummy();
             Console.WriteLine(dummy2.b);
+
+            Console.WriteLine("Something");
+        }
+
+        
+        static void PrintSomething()
+        {
+            Console.WriteLine("Something");
         }
     }
 }

@@ -61,7 +61,7 @@ public class Test_Coroutine : MonoBehaviour
         //return new C_RefreshEnum();
     }
     
-    struct C_RefreshEnum : IEnumerator
+    /*struct C_RefreshEnum : IEnumerator
     {
         public object Current => throw new System.NotImplementedException();
         private int _index;
@@ -98,6 +98,6 @@ public class Test_Coroutine : MonoBehaviour
         {
             throw new System.NotImplementedException();
         }
-    }
+    }*/
 
 }
