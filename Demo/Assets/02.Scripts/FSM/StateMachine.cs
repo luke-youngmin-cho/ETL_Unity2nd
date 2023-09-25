@@ -1,48 +1,63 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+namespace FSM
 {
-    public int current;
-    public Dictionary<int, IState> states;
-    private bool _isDirty;
-
-
-    public bool ChangeState(int newID)
+    public class StateMachine
     {
-        if (_isDirty)
-            return false;
+        public GameObject owner;
+        public int current;
+        public Dictionary<int, IState> states;
+        private bool _isDirty;
 
-        if (newID == current)
-            return false;
+        public StateMachine(GameObject owner)
+        {
+            this.owner = owner;
+        }
 
-        if (states[newID].canExecute == false)
-            return false;
+        public bool ChangeState(int newID)
+        {
+            // 이미 현재 프레임에서 상태가 바뀐적이 있다면 바꾸지않겠다
+            if (_isDirty)
+                return false;
 
-        states[current].OnExit();
-        current = newID;
-        states[current].OnEnter();
-        _isDirty = true;
-        return true;
-    }
+            // 바꾸려는 상태가 현재 상태라면 바꾸지 않겠다
+            if (newID == current)
+                return false;
 
-    private void Initialize(Dictionary<int, IState> copy)
-    {
-        this.states = new Dictionary<int, IState>(copy);
-    }
+            // 바꾸려는 상태가 실행가능하지 않다면 바꾸지않겠다.
+            if (states[newID].canExecute == false)
+                return false;
 
-    private void Update()
-    {
-        ChangeState(states[current].OnUpdate());
-    }
+            states[current].OnExit(); // 기존 상태에서 나옴
+            current = newID; // 상태 갱신
+            states[current].OnEnter(); // 새로운 상태로 진입
+            _isDirty = true;
+            Debug.Log($"Changed state to {newID}");
+            return true;
+        }
 
-    private void FixedUpdate()
-    {
-        states[current].OnFixedUpdate();
-    }
+        protected virtual void Initialize(IEnumerable<KeyValuePair<int, IState>> copy)
+        {
+            this.states = new Dictionary<int, IState>(copy);
+            current = states.First().Key;
+            states[current].OnEnter();
+        }
 
-    private void LateUpdate()
-    {
-        _isDirty = false;
+        public void Update()
+        {
+            ChangeState(states[current].OnUpdate());
+        }
+
+        public void FixedUpdate()
+        {
+            states[current].OnFixedUpdate();
+        }
+
+        public void LateUpdate()
+        {
+            _isDirty = false;
+        }
     }
 }
