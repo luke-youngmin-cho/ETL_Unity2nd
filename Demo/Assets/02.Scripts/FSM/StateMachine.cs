@@ -13,7 +13,7 @@ namespace FSM
 
         public StateMachine(GameObject owner)
         {
-            this.owner = owner;
+            this.owner = owner; // 이 기계의 주인은 나다
         }
 
         public bool ChangeState(int newID)
